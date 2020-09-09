@@ -20,7 +20,7 @@
     </div>
     <div class="container">
         <h3>Latest Mars News</h3>
-        <h6 style="color: rgba(224, 89, 10, 0.267)">{{ mars.news_title }}</h6>
+        <h6 style="color: rgba(224, 88, 10, 0.979)">{{ mars.news_title }}</h6>
         <p>{{ mars.news_p }}</p>
     </div>
     <div class="container">
@@ -33,23 +33,23 @@
         <div class="col-lg-4 col-md-4 cold-sm-12">
           <br>
           <h3>Mars Facts</h3>
-          <div style="max-width: 450px; max-height: 150px; font-size: 15px; margin-bottom: 65px;">
+          <div style="max-width: 450px; max-height: 150px; font-size: 20px; margin-bottom: 65px;">
               {{ mars.facts|safe }}
           </div>
         </div>
     </div>
     
-    <h3 style="padding-top: 50px; margin-top: 100px; text-align: center;">Mars Hemishperes</h3>
+    <h3 style="padding-top: 50px; margin-top: 100px; text-align: center;">Mars Hemispheres</h3>
     <div class="card-deck">
       <hr>
       <div class="col=md=12">
         <div class="row">
-          {% for items in mars.hiu %}
+          {% for item in mars.hemisphere %}
           <div class="col-md-6">
-            <div class="card text white bg-dark" style="margin: 30px;">
+            <div class="card text white" style="margin: 45px;">
               <img class="card-img-top" src="{{ item.img_url }}" />
               <div class="card-body">
-                <p class="card-text">{{ item.title }}</p>
+                <strong class="card-text">{{ item.title }}</strong>
               </div>
             </div>
           </div>

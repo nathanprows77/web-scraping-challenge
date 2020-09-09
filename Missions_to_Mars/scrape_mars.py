@@ -8,7 +8,7 @@ import os
 def scrape_info():
 
 
-    browser = Browser('chrome')
+    browser = Browser('chrome', executable_path="C:\\Users\\nprow\\Documents\\GitHub\\web-scraping-challenge\\Missions_to_Mars\\chromedriver.exe")
     mars = {}
 
     url = 'https://mars.nasa.gov/news/'
@@ -48,7 +48,7 @@ def scrape_info():
     url = "https://space-facts.com/mars/"
     table=pd.read_html(url)
     df=table[0]
-    df.columns=['Attributes', 'values']
+    df.columns=['Description', 'Values']
     html_table=df.to_html()
     html_table=html_table.replace('\n', '')
     mars["facts"] = html_table
